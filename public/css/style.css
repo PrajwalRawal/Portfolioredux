@@ -7,29 +7,37 @@ body {
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
 }
+body.hidden {
+  overflow: hidden;
+}
 
-h1 {
+h1, .h1-text {
   font-size: 3em;
 }
 
-h2 {
+h2, .h2-text {
   font-size: 2.5em;
 }
 
-h3 {
+h3, .h3-text {
   font-size: 2em;
 }
 
-h4 {
+h4, .h4-text {
   font-size: 1.5em;
 }
 
-h5 {
+h5, .h5-text {
   font-size: 1em;
 }
 
-h6 {
+h6, .h6-text {
   font-size: 0.5em;
+}
+
+main {
+  max-width: 65%;
+  margin: auto;
 }
 
 header {
@@ -42,6 +50,9 @@ header .brand, header .icon {
   max-width: 0 0 50%;
   padding: 0 15px;
 }
+header .icon {
+  cursor: pointer;
+}
 header .icon div {
   display: flex;
   align-items: center;
@@ -53,6 +64,144 @@ header .icon img {
 }
 header .icon span {
   margin-right: 5px;
+}
+
+nav {
+  position: fixed;
+  background: #000;
+  height: 0;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  transition: all ease-in-out 0.3s;
+  z-index: 1;
+}
+nav.active {
+  height: 100vh;
+}
+nav.active ul {
+  visibility: visible;
+}
+nav.active span {
+  visibility: visible;
+}
+nav span {
+  transition: all ease-in-out 0.3s;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  color: #fff;
+  font-size: 3em;
+  cursor: pointer;
+  visibility: hidden;
+}
+nav ul {
+  transition: all ease-in-out 0.3s;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+}
+nav ul li {
+  text-align: center;
+  line-height: 3.5em;
+}
+nav ul li a {
+  font-size: 3em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+footer .copyright, footer .social {
+  flex: 0 0 50%;
+  padding: 0 15px;
+  line-height: 50px;
+}
+footer .social ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: right;
+}
+footer .social ul li {
+  margin: 0 10px;
+  display: inline-block;
+  line-height: 50px;
+}
+footer .social ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+#hero {
+  padding: 60px 0 0 0;
+}
+#hero .portfolio {
+  padding-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 -30px;
+}
+#hero .portfolio .card {
+  flex: 0 0 50%;
+  padding: 0 30px;
+  margin-bottom: 60px;
+}
+#hero .portfolio .card .image {
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+}
+#hero .portfolio .card .image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  transition: all ease-in-out 0.3s;
+}
+#hero .portfolio .card .detail {
+  padding: 0 30px;
+  position: relative;
+}
+#hero .portfolio .card .detail span {
+  display: block;
+  font-weight: bold;
+}
+#hero .portfolio .card .detail span.title {
+  font-size: 2em;
+  line-height: 2.5em;
+}
+#hero .portfolio .card .detail span.category {
+  font-size: 1em;
+  color: #999;
+}
+#hero .portfolio .card .detail i.right {
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  height: 15px;
+  width: 15px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: rotate(-45deg) translateY(-50%);
+  opacity: 0;
+  transition: all ease-in-out 0.3s;
+}
+#hero .portfolio .card:hover img {
+  transform: scale(1.5);
+}
+#hero .portfolio .card:hover i.right {
+  opacity: 1;
+  right: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

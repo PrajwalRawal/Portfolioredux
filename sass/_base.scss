@@ -5,23 +5,31 @@ body{
     margin: 0;
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
+    &.hidden{
+        overflow: hidden;
+    }
 }
 
-h1{
+h1, .h1-text{
     font-size: 3em;
 }
-h2{
+h2, .h2-text{
     font-size: 2.5em;
 }
-h3{
+h3, .h3-text{
     font-size: 2em;
 }
-h4{
+h4, .h4-text{
     font-size: 1.5em;
 }
-h5{
+h5, .h5-text{
     font-size: 1em;
 }
-h6{
+h6, .h6-text{
     font-size: 0.5em;
+}
+
+main{
+    max-width: 65%;
+    margin: auto;
 }

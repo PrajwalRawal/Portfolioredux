@@ -9,6 +9,7 @@ header{
         padding: 0 15px;
     }
     .icon{
+        cursor: pointer;
         div{
             display: flex;
             align-items: center;
@@ -20,6 +21,54 @@ header{
         }
         span{
             margin-right: 5px;
+        }
+    }
+}
+nav{
+    position: fixed;
+    background: $black;
+    height: 0;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    transition: all ease-in-out 0.3s;
+    z-index: 1;
+    &.active{
+        height: 100vh;
+        ul{
+            visibility: visible;
+        }
+        span{
+            visibility: visible
+        }
+    }
+    span{
+        transition: all ease-in-out 0.3s;
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        color: $white;
+        font-size: 3em;
+        cursor: pointer;
+        visibility: hidden;
+        
+    }
+    ul{
+        transition: all ease-in-out 0.3s;
+        margin: 0;
+        padding: 0;
+        visibility: hidden;
+        li{
+            text-align: center;
+            line-height: 3.5em;
+            a{
+                font-size: 3em;
+                color: $white;
+                text-decoration: none;
+                font-weight: bold;
+            }
         }
     }
 }

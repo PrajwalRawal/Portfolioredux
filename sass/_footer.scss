@@ -1,0 +1,28 @@
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    .copyright, .social{
+        flex: 0 0 50%;
+        padding: 0 15px;
+        line-height: 50px;
+    }
+    .social{
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: right;
+            li{
+                margin: 0 10px;
+                display: inline-block;
+                line-height: 50px;
+                a{
+                    text-decoration: none;
+                    color: $black;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
