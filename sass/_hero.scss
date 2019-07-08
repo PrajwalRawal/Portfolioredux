@@ -63,4 +63,18 @@
             }
         }
     }
+    button{
+        height: 40px;
+        width: 250px;
+        background: $red;
+        color: $white;
+        border: 0;
+        outline: 0;
+        font-size: 1.25em;
+        border-radius: 3px;
+        max-width: 250px;
+        margin: auto;
+        display: block;
+        cursor: pointer;
+    }
 }

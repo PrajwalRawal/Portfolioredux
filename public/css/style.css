@@ -203,5 +203,19 @@ footer .social ul li a {
   opacity: 1;
   right: 30px;
 }
+#hero button {
+  height: 40px;
+  width: 250px;
+  background: #ef3f3f;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  font-size: 1.25em;
+  border-radius: 3px;
+  max-width: 250px;
+  margin: auto;
+  display: block;
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=style.css.map */
