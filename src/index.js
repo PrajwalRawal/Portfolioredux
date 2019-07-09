@@ -6,7 +6,7 @@ import axios from 'axios'
 import App from './App'
 import store from './store'
 
-axios.defaults.baseURL = 'https://5d024bd79ce12c0014e0f50b.mockapi.io/api'
+axios.defaults.baseURL = 'https://jsonplaceholder.typicode.com'
 
 ReactDOM.render(
     <Provider store={store}>

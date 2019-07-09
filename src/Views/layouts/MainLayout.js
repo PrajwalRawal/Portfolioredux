@@ -1,10 +1,27 @@
 import React, { Component, Fragment } from 'react'
 import {Link} from 'react-router-dom'
+import {animateScroll as scroll} from 'react-scroll'
 
 export default class MainLayout extends Component {
+    componentDidMount(){
+        window.addEventListener("scroll", (e) => {
+            let top = window.scrollY;
+            console.log(top)
+            if(top === 0){
+                document.getElementById('scrollTop').classList.add('hide');
+            }else{
+                document.getElementById('scrollTop').classList.remove('hide');
+            }
+        }, false);
+    }
     handleClick = () => {
         document.getElementById('menu').classList.toggle('active');
         document.body.classList.toggle('hidden');
+    }
+    scrollTop = () => {
+        scroll.scrollToTop({
+            duration: `${this.props.duration}ms`
+        });
     }
     render() {
         return (
@@ -55,7 +72,7 @@ export default class MainLayout extends Component {
                         </ul>
                     </div>
                 </footer>
-
+                <button id="scrollTop" className="top-btn hide" onClick={this.scrollTop}>^</button>
             </Fragment>
         )
     }

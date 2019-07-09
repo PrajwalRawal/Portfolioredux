@@ -33,3 +33,23 @@ main{
     max-width: 65%;
     margin: auto;
 }
+.top-btn{
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    font-size: 5em;
+    border-radius: 30px;
+    border: 0;
+    box-shadow: 1px 1px 5px #ddd;
+    font-weight: lighter;
+    cursor: pointer;
+    outline: 0;
+    visibility: visible;
+    transition: all ease-in-out 0.3s;
+    &.hide{
+        visibility: hidden;
+        right: -90px;
+    }
+}

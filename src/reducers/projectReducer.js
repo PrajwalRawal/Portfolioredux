@@ -1,17 +1,20 @@
 let initState = {
     projects: [],
-    allproject: [],
-    page_id: 1
+    page_id: 1,
 }
 export default (state = initState, action) => {
     let {type, payload} = action
     switch(type){
         case 'GET_PORTFOLIO':
-            let {allproject, projects, page_id} = payload
             return{
-                allproject,
-                projects,
-                page_id 
+                ...state,
+                projects: payload,
+                has_more: true
+            }
+        case 'CHANGE_PAGE':
+            return{
+                ...state,
+                page_id: payload
             }
         default:
             return state;
